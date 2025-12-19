@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aneri Moradia - Frontend Developer</title>
+    <meta name="description" content="Aneri Moradia's personal portfolio website showcasing projects and skills as a Frontend Developer."> 
+
+    <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com"/>
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="brand">
+            <img src="assets/avatar.svg" alt="Aneri Moradia Logo" class="avatar"/>
+            <span>Aneri Moradia</span>
+        </div>
+        <nav class="site-nav" aria-label="Primary">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">
+                ^
+            </button>
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="#work">Work</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education"> Education</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero -->
+     <section class="hero">
+        <h1>Frontend Develoepr</h1>
+        <p>HTML - only portfolio with proper layout and semantics</p>
+     </section>
+
+     <main id="main">
+        <!-- Portfolio Grid -->
+        <section class="grid" aria-label="Portfolio Section">
+
+            <!-- Projects -->
+            <article class="card">
+                <img src="assets/project1.png" alt="Screenshot of Project 1"/>
+                <h2>Project 1</h2>
+                <p>Description of Project 1.</p>
+            </article>
+            <article class="card">
+                <img src="assets/project2.png" alt="Screenshot of Project 2"/>
+                <h2>Project 2</h2>
+                <p>Description of Project 2.</p>
+            </article>
+            <article class="card">
+                <img src="assets/project3.png" alt="Screenshot of Project 3"/>
+                <h2>Project 3</h2>
+                <p>Description of Project 3.</p>
+            </article>
+            <article class="card">
+                <img src="assets/project4.png" alt="Screenshot of Project 4"/>
+                <h2>Project 4</h2>
+                <p>Description of Project 4.</p>
+            </article>
+
+            <!-- Work Experience -->
+             <article class="card" id="work">
+                <h2>Work Experience</h2>
+
+                <section>
+                    <h3>roadmap.sh</h3>
+                    <p>Solved all frontend projects.</p>
+                    <p><a href="#">Visit my profile</a></p>
+                </section>
+
+                <section>
+                    <h3>Open Source</h3>
+                    <p>
+                        Contributed to various open source projects on GitHub.
+                    </p>
+                    <p>
+                        <a href="#">GitHib Profile</a>
+                    </p>
+                </section>
+             </article>
+            <!-- Education -->
+                <article class="card" id="education">
+                    <h2>Education</h2>
+                    <section>
+                        <h3>Bachelor's in Computer Engineer</h3>
+                        <p>University of Mumbai, 2018</p>
+                        <ul>
+                            <li>Object Oriented Programming using Java</li>
+                            <li>Database Management Systems</li>
+                            <li>Data Structures and Algorithms</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Master in Computer Science</h3>
+                        <p>East Texas A&M University, 2023</p>
+                        <ul>
+                            <li>Web Development</li>
+                            <li>Software Engineering</li>
+                            <li>Cloud Computing</li>
+                            <li>Artificial Intelligence</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Master in Information Technology</h3>
+                        <p>University of Cumberlands, 2024</p>
+                        <ul>
+                            <li>Network Security</li>
+                            <li>Data Analytics</li>
+                            <li>Mobile Application Development</li>
+                            <li>Machine Learning</li>
+                            <li>Big Data Technologies</li>
+                        </ul>
+                    </section>
+                </article>
+        </section>
+        <!-- Reviews Section -->
+        <section class="reviews" id="reviews" aria-label="Reviews Section">
+            <h2>Reviews</h2>
+            <blockquote>
+                <p>"Aneri is a talented frontend developer who delivers high-quality work on time."</p>
+                <footer>- Bose Corporation</footer>
+            </blockquote>
+            <blockquote>
+                <p>"Working with Aneri was a pleasure. Her attention to detail is impressive."</p>
+                <footer>- Paytm</footer>
+            </blockquote>
+        </section>
+        <!-- Contact Section -->
+        <section class="contact" id="contact" aria-label="Contact form">
+            <h2>Contact Me</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required/>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required/>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+     </main>
+    <footer class="site-footer">
+        <p>&copy; 2025 Aneri Moradia. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', !isExpanded);
+            navMenu.classList.toggle('nav-menu--visible');
+        });
+    </script>
+</body>
+</html>
